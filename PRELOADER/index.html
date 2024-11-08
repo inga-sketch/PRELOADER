@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRELOADER</title>
+    <style>
+        body {
+            background-color: #333
+        }
+        .preloader {
+           /* border: 1px solid white;*/
+            width: 100px;
+            height: 300px;
+            margin-top: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .ball {
+            height: 100px;
+            width: 100px;
+            background-image: radial-gradient(white, white,  black);
+            border-radius: 100%;
+            animation: bounce 1s 10;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        .label {
+            width: 200px; 
+            color: #ffffff;
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+        }
+        .shadow {
+            width: 100px;
+            height: 30px;
+            background-image: radial-gradient( #000000, transparent);
+            border-radius: 100%;
+            transform: translateY(200px);
+            animation: flicker 1s 10;
+            animation-direction: alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(200px);}
+            to { transform: translateY(0);}
+        }
+        @keyframes flicker {
+            
+            from{opacity: 1;
+                 width: 100px;
+                 height: 30px;
+                }
+            to {opacity: 0;
+                 width: 200px;
+                 height: 60px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+    </div>
+    <div class="label">
+        loading...
+    </div>
+    
+</body>
+</html>
